@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Alvianz Store</title>
+
+  <!-- Font & Style -->
+  <link rel="manifest" href="manifest.json" />
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- 🔐 Login -->
+  <div id="login-screen" class="fade-in">
+    <img src="https://img1.pixhost.to/images/6988/618738275_reyytourl.jpg" alt="Logo" class="logo" />
+    <h1><span class="brand">Alvianz Store</span></h1>
+    <p class="slogan">💼 Saatnya jadi bandar — <strong>modal ringan, untung maksimal!</strong></p>
+    <input type="text" id="username" placeholder="Masukkan Nama Anda" />
+    <button onclick="masuk()">Lanjutkan</button>
+  </div>
+
+  <!-- 🧭 Dashboard -->
+  <div id="dashboard" style="display:none;">
+    <marquee class="promo-marquee">🔥 Promo Hari Ini: Diskon 70% Tampilan UG!</marquee>
+    <div id="content"></div>
+    <nav>
+      <button onclick="tampilkan('beranda')">🏠 Beranda</button>
+      <button onclick="tampilkan('deposit')">💸 Deposit</button>
+      <button onclick="tampilkan('akun')">👤 Akun Saya</button>
+    </nav>
+  </div>
+
+  <!-- 🔌 Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js"></script>
+
+  <!-- 🔐 Firebase Config & Script -->
+  <script src="core.js"></script>
+  <script src="coredb.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
